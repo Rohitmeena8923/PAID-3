@@ -13,12 +13,12 @@
     "env": {
         "API_ID": {
             "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑨𝒑𝒊 𝑰𝑫",
-            "value": "",
+            "value": "27775431",
             "required": true
         },
         "API_HASH": {
             "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑨𝒑𝒊 𝑯𝒂𝒔𝒉",
-            "value": "",
+            "value": "b70bb1d45a1d05236671d4cc615e40f9",
             "required": true
         },
         "BOT_TOKEN": {
@@ -28,7 +28,7 @@
         },
         "OWNER": {
             "description": "𝙀𝙣𝙩𝙚𝙧 𝙔𝙤𝙪𝙧 𝙏𝙚𝙡𝙚𝙜𝙧𝙖𝙢 𝙄𝘿",
-            "value": "5680454765",
+            "value": "6414266397",
             "required": true
         },
         "CREDIT": {
