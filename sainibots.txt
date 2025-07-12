@@ -1,51 +1,50 @@
-#saini bots
-async-lru==2.0.2
-certifi==2023.5.7
-charset-normalizer==3.1.0
-idna==3.4
-mutagen==1.46.0
-pyaes==1.6.1
-pycryptodome==3.18.0
-pyrogram
-pyrofork
+# Core bot packages
+pyrogram==2.0.106
 pyromod==1.5
-PySocks==1.7.1
-python-dotenv==1.0.0
-python-telegram-bot==20.3
-requests==2.31.0
-soupsieve==2.4.1
 TgCrypto==1.2.5
-urllib3==2.0.3
-websockets==11.0.3
-yt-dlp==2025.02.19
-motor
-pytz
+
+# System tools
 aiohttp
 aiofiles
 pytz
 pillow
 m3u8
-umongo==3.1.0
+mutagen==1.46.0
 speedtest-cli
+async-lru==2.0.2
+
+# For Flask server
 Flask==1.1.2
 gunicorn==20.1.0
 Jinja2==3.0.3
 werkzeug==2.0.2
 itsdangerous==2.0.1
-ffmpeg
-youtube-dl
+
+# Extra
+certifi
+charset-normalizer
+idna
+PySocks
+requests
+urllib3
 cloudscraper
+python-dotenv==1.0.0
+reportlab
+sqlalchemy
+wget
+pycryptodome
 cryptography
 PyJWT
-sqlalchemy
 pyopenssl
-wget
-bs4
-beautifulsoup4
-reportlab
-pytube
+
+# Google API (if using)
 google-auth
 google-auth-oauthlib
 google-auth-httplib2
 google-api-python-client
-ffmpeg-python
+
+# yt-dlp
+yt-dlp==2025.02.19
+
+# Parsing
+beautifulsoup4
