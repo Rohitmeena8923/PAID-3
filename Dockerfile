@@ -1,22 +1,22 @@
-FROM python:3.9.6-alpine3.14
+FROM python:3.9-slim
 
 WORKDIR /app
-
 COPY . .
 
-RUN apk add --no-cache \
-    gcc \
-    libffi-dev \
-    musl-dev \
+RUN apt-get update && apt-get install -y \
     ffmpeg \
     aria2 \
-    make \
+    gcc \
     g++ \
     cmake \
     unzip \
+    make \
     wget \
-    supervisor && \
-    wget -q https://github.com/axiomatic-systems/Bento4/archive/v1.6.0-639.zip && \
+    supervisor \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install Bento4's mp4decrypt
+RUN wget -q https://github.com/axiomatic-systems/Bento4/archive/v1.6.0-639.zip && \
     unzip v1.6.0-639.zip && \
     cd Bento4-1.6.0-639 && \
     mkdir build && cd build && \
@@ -24,8 +24,9 @@ RUN apk add --no-cache \
     cp mp4decrypt /usr/local/bin/ && \
     cd /app && rm -rf Bento4-1.6.0-639 v1.6.0-639.zip
 
-RUN pip3 install --no-cache-dir --upgrade pip \
-    && pip3 install --no-cache-dir -r sainibots.txt \
-    && python3 -m pip install -U yt-dlp
+# Install Python deps
+RUN pip install --upgrade pip && \
+    pip install -r sainibots.txt && \
+    pip install yt-dlp
 
 CMD ["supervisord", "-c", "/app/supervisord.conf"]
